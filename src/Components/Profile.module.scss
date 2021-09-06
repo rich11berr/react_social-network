@@ -1,0 +1,29 @@
+.main {
+  grid-area: main;
+  background-color: lightblue;
+  display: flex;
+  .background_img {
+    img {
+      height: 250px;
+    }
+  }
+  .profile_info {
+    display: flex;
+    flex-direction: row;
+    .profile-img {
+      width: 200px;
+      height: 150px;
+    }
+    .profile_text {
+      display: flex;
+      flex-direction: column;
+      p {
+        margin-top: 3px;
+        margin-left: 10px;
+        &:first-child {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
