@@ -1,0 +1,51 @@
+.app-wrapper {
+  display: grid;
+
+  grid-template-areas:
+    "header header "
+    "nav main ";
+
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr;
+  grid-gap: 10px;
+  .header {
+    grid-area: header;
+    background-color: lightgreen;
+    img {
+      width: 30px;
+    }
+  }
+  .nav {
+    grid-area: nav;
+    background-color: pink;
+  }
+  .main {
+    grid-area: main;
+    background-color: lightblue;
+    display: flex;
+    .background-img {
+      img {
+        height: 200px;
+      }
+    }
+    .profile-info {
+      display: flex;
+      flex-direction: row;
+      .profile-img {
+        width: 200px;
+        height: 150px;
+      }
+      .profile-text {
+        display: flex;
+        flex-direction: column;
+        p {
+          margin-top: 3px;
+          margin-left: 10px;
+          &:first-child {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}

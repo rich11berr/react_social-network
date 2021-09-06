@@ -1,0 +1,67 @@
+.app-wrapper {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "header header " "nav main ";
+  -ms-grid-rows: 60px 10px 1fr;
+  grid-template-rows: 60px 1fr;
+  -ms-grid-columns: 2fr 10px 10fr;
+  grid-template-columns: 2fr 10fr;
+  grid-gap: 10px;
+}
+.app-wrapper .header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: header;
+  background-color: lightgreen;
+}
+.app-wrapper .header img {
+  width: 30px;
+}
+.app-wrapper .nav {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: nav;
+  background-color: pink;
+}
+.app-wrapper .main {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: main;
+  background-color: lightblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.app-wrapper .main .background-img img {
+  height: 200px;
+}
+.app-wrapper .main .profile-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.app-wrapper .main .profile-info .profile-img {
+  width: 200px;
+  height: 150px;
+}
+.app-wrapper .main .profile-info .profile-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.app-wrapper .main .profile-info .profile-text p {
+  margin-top: 3px;
+  margin-left: 10px;
+}
+.app-wrapper .main .profile-info .profile-text p:first-child {
+  font-weight: bold;
+}
