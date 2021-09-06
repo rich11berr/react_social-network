@@ -1,4 +1,5 @@
 import React from 'react';
+import Posts from './Posts/Posts';
 import styles from './Profile.module.css';
 
 const Profile = () => {
@@ -25,32 +26,7 @@ const Profile = () => {
               <p>Info</p>
             </div>
           </div>
-          <div className={styles.posts}>
-            <h2>My posts</h2>
-            <form action>
-              <textarea
-                name
-                id
-                cols={30}
-                rows={10}
-                placeholder="your news..."
-                defaultValue={"        "}
-              />
-              <button>send</button>
-            </form>
-            <div className={styles.post}>
-              <p>Lorem ipsum</p>
-            </div>
-            <div className={styles.post}>
-              <p>Lorem ipsum</p>
-            </div>
-            <div className={styles.post}>
-              <p>Lorem ipsum</p>
-            </div>
-            <div className={styles.post}>
-              <p>Lorem ipsum</p>
-            </div>
-          </div>
+          <Posts />
         </div>
       </main>
     )
