@@ -1,0 +1,19 @@
+.post {
+  margin-top: 20px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  gap: 10px;
+  p {
+    font-size: 15px;
+    &:first-of-type {
+      font-size: 17px;
+      font-weight: bold;
+    }
+  }
+  span {
+    font-size: 12px;
+    font-weight: light;
+  }
+}

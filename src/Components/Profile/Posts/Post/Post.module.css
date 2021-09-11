@@ -1,0 +1,22 @@
+.post {
+  margin-top: 20px;
+  margin-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #fff;
+  gap: 10px; }
+  .post p {
+    font-size: 15px; }
+    .post p:first-of-type {
+      font-size: 17px;
+      font-weight: bold; }
+  .post span {
+    font-size: 12px;
+    font-weight: light; }
+
+/*# sourceMappingURL=Post.module.css.map */

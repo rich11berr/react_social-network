@@ -1,10 +1,13 @@
 import React from "react";
 import styles from "./Post.module.css"
 
-const Post = () => {
+const Post = (props) => {
     return (
         <div className={styles.post}>
-        <p>Lorem ipsum</p>
+        <img src="" alt="userpic" />
+        <p>{props.username} :</p>
+        <p>{props.message}</p>
+        <span>{props.like} likes</span>
     </div>
     ) 
 }

@@ -18,12 +18,12 @@ const Posts = () => {
               />
               <button>send</button>
             </form>
+            <Post message='Hi< how ar u?' username="user1" like="3"/>
+            <Post message="It's my first post here)" username="user1" like="4"/>
+            {/* <Post />
             <Post />
             <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
+            <Post /> */}
           </div>
     )
 }

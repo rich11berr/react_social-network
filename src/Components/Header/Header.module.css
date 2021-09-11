@@ -1,7 +1,7 @@
 .header {
   grid-area: header;
-  background-color: lightgreen;
-}
-.header img {
-  width: 30px;
-}
+  background-color: lightgreen; }
+  .header img {
+    width: 30px; }
+
+/*# sourceMappingURL=Header.module.css.map */
