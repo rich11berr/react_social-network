@@ -314,4 +314,8 @@ template {
   grid-template-columns: 2fr 10fr;
   grid-gap: 10px; }
 
+.main {
+  grid-area: main;
+  background-color: lightblue; }
+
 /*# sourceMappingURL=App.css.map */

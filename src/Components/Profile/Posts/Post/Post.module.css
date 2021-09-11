@@ -9,7 +9,8 @@
       -ms-flex-direction: row;
           flex-direction: row;
   background-color: #fff;
-  gap: 10px; }
+  gap: 10px;
+  position: relative; }
   .post p {
     font-size: 15px; }
     .post p:first-of-type {
@@ -17,6 +18,10 @@
       font-weight: bold; }
   .post span {
     font-size: 12px;
-    font-weight: light; }
+    font-weight: light;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    cursor: pointer; }
 
 /*# sourceMappingURL=Post.module.css.map */
