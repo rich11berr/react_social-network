@@ -1,1 +1,39 @@
-
+.dialogs {
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+  .dialog_users {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    .dialog_user {
+      padding: 5px;
+      background-color: #fff;
+      cursor: pointer;
+      p {
+        font-size: 17px;
+        font-weight: bold;
+      }
+      &:hover {
+        background-color: rgb(69, 69, 230);
+      }
+    }
+    .active {
+      background-color: rgb(69, 69, 230);
+    }
+  }
+  .dialog_messages {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-left: 2px solid black;
+    padding: 20px;
+    .dialog_message {
+      padding: 5px;
+      background-color: #fff;
+      width: 200px;
+      height: fit-content;
+    }
+  }
+}

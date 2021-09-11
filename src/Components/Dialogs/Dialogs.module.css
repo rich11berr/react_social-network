@@ -1,3 +1,33 @@
-
+.dialogs {
+  display: grid;
+  grid-template-columns: 2fr 10fr; }
+  .dialogs .dialog_users {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px; }
+    .dialogs .dialog_users .dialog_user {
+      padding: 5px;
+      background-color: #fff;
+      cursor: pointer; }
+      .dialogs .dialog_users .dialog_user p {
+        font-size: 17px;
+        font-weight: bold; }
+      .dialogs .dialog_users .dialog_user:hover {
+        background-color: #4545e6; }
+    .dialogs .dialog_users .active {
+      background-color: #4545e6; }
+  .dialogs .dialog_messages {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-left: 2px solid black;
+    padding: 20px; }
+    .dialogs .dialog_messages .dialog_message {
+      padding: 5px;
+      background-color: #fff;
+      width: 200px;
+      height: fit-content; }
 
 /*# sourceMappingURL=Dialogs.module.css.map */
