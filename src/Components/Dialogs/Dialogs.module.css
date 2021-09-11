@@ -10,7 +10,7 @@
       padding: 5px;
       background-color: #fff;
       cursor: pointer; }
-      .dialogs .dialog_users .dialog_user p {
+      .dialogs .dialog_users .dialog_user a {
         font-size: 17px;
         font-weight: bold; }
       .dialogs .dialog_users .dialog_user:hover {
