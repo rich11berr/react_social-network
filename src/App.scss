@@ -1,6 +1,29 @@
 @import "normalize.scss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;900&display=swap");
+$main_bg: linear-gradient(160.72deg, #41025b 0%, #1a1a1a 100%);
+$inactive_bg: #4d0c67;
+$active_bg: linear-gradient(160.2deg, #5037e9 0%, #4a20c4 100%);
+$red_bg: linear-gradient(146.08deg, #fa8867 0%, #fe5c5c 100%);
+$br: 20px;
+$bx_black: 10px 10px 25px rgba(101, 18, 135, 0.1),
+  15px 15px 35px rgba(101, 18, 135, 0.05),
+  10px 10px 50px rgba(101, 18, 135, 0.1);
+$bx_blue: 4px 4px 25px rgba(42, 139, 242, 0.15),
+  2px 2px 25px rgba(42, 139, 242, 0.05), 4px 6px 10px rgba(42, 139, 242, 0.15);
+$bx_white: 10px 10px 25px rgba(112, 124, 151, 0.1),
+  15px 15px 35px rgba(112, 124, 151, 0.05),
+  10px 10px 50px rgba(112, 124, 151, 0.1);
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: $main_bg;
+}
 .app-wrapper {
   display: grid;
+  font-family: "Poppins", sans-serif;
+  background: transparent;
 
   grid-template-areas:
     "header header "
@@ -12,5 +35,5 @@
 }
 .main {
   grid-area: main;
-  background-color: lightblue;
+  background-color: transparent;
 }

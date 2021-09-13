@@ -1,7 +1,30 @@
+$main_bg: linear-gradient(160.72deg, #41025b 0%, #1a1a1a 100%);
+$inactive_bg: #4d0c67;
+$active_bg: linear-gradient(160.2deg, #5037e9 0%, #4a20c4 100%);
+$red_bg: linear-gradient(146.08deg, #fa8867 0%, #fe5c5c 100%);
+$br: 20px;
+$bx: 10px 10px 25px rgba(101, 18, 135, 0.1),
+  15px 15px 35px rgba(101, 18, 135, 0.05),
+  10px 10px 50px rgba(101, 18, 135, 0.1);
+
 .header {
   grid-area: header;
-  background-color: lightgreen;
-  img {
-    width: 30px;
+  background-color: $inactive_bg;
+  width: 75%;
+  margin: 10px auto;
+  border-radius: $br;
+  box-shadow: $bx;
+  height: fit-content;
+  a {
+    text-decoration: none;
+    h1 {
+      color: white;
+      font-size: 35px;
+      margin-left: 20px;
+    }
   }
+
+  // img {
+  //   width: 30px;
+  // }
 }

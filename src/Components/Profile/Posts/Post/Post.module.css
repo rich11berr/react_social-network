@@ -1,6 +1,5 @@
 .post {
   margin-top: 20px;
-  margin-left: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9,8 +8,13 @@
       -ms-flex-direction: row;
           flex-direction: row;
   background-color: #fff;
-  gap: 10px;
-  position: relative; }
+  position: relative;
+  width: 30%;
+  border-radius: 20px;
+  -webkit-box-shadow: 10px 10px 25px rgba(112, 124, 151, 0.1), 15px 15px 35px rgba(112, 124, 151, 0.05), 10px 10px 50px rgba(112, 124, 151, 0.1);
+          box-shadow: 10px 10px 25px rgba(112, 124, 151, 0.1), 15px 15px 35px rgba(112, 124, 151, 0.05), 10px 10px 50px rgba(112, 124, 151, 0.1); }
+  .post img {
+    margin: auto 5px; }
   .post p {
     font-size: 15px; }
     .post p:first-of-type {
@@ -18,10 +22,11 @@
       font-weight: bold; }
   .post span {
     font-size: 12px;
-    font-weight: light;
+    font-weight: 300;
     position: absolute;
-    right: 0px;
-    bottom: 0px;
-    cursor: pointer; }
+    right: 10px;
+    bottom: -25px;
+    cursor: pointer;
+    color: white; }
 
 /*# sourceMappingURL=Post.module.css.map */

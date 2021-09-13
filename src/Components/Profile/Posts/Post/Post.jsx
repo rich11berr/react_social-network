@@ -1,15 +1,19 @@
 import React from "react";
-import styles from "./Post.module.css"
+import styles from "./Post.module.css";
 
 const Post = (props) => {
-    return (
-        <div className={styles.post}>
-        <img src="" alt="userpic" />
-        <p>{props.username} :</p>
+  return (
+    <div className={styles.post}>
+      <img src="" alt="userpic" />
+      <div className={styles.post_mainText}>
         <p>{props.message}</p>
-        <span>{props.like} likes</span>
+      </div>
+      <span>
+        {props.like}
+        <img src="" alt="heart" />
+      </span>
     </div>
-    ) 
-}
+  );
+};
 
 export default Post;

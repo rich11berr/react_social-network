@@ -1,7 +1,19 @@
 .header {
   grid-area: header;
-  background-color: lightgreen; }
-  .header img {
-    width: 30px; }
+  background-color: #4d0c67;
+  width: 75%;
+  margin: 10px auto;
+  border-radius: 20px;
+  -webkit-box-shadow: 10px 10px 25px rgba(101, 18, 135, 0.1), 15px 15px 35px rgba(101, 18, 135, 0.05), 10px 10px 50px rgba(101, 18, 135, 0.1);
+          box-shadow: 10px 10px 25px rgba(101, 18, 135, 0.1), 15px 15px 35px rgba(101, 18, 135, 0.05), 10px 10px 50px rgba(101, 18, 135, 0.1);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content; }
+  .header a {
+    text-decoration: none; }
+    .header a h1 {
+      color: white;
+      font-size: 35px;
+      margin-left: 20px; }
 
 /*# sourceMappingURL=Header.module.css.map */

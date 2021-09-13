@@ -1,3 +1,42 @@
-
+.posts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px; }
+  .posts h2 {
+    font-size: 25px;
+    color: white; }
+  .posts .posts_form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .posts .posts_form input {
+      width: 200px;
+      height: 58px;
+      padding: 10px;
+      border: 1px solid rgba(112, 124, 151, 0.25);
+      border-radius: 16px 16px 0px 16px;
+      -webkit-box-shadow: 10px 10px 25px rgba(112, 124, 151, 0.1), 15px 15px 35px rgba(112, 124, 151, 0.05), 10px 10px 50px rgba(112, 124, 151, 0.1);
+              box-shadow: 10px 10px 25px rgba(112, 124, 151, 0.1), 15px 15px 35px rgba(112, 124, 151, 0.05), 10px 10px 50px rgba(112, 124, 151, 0.1);
+      outline: none;
+      border: none; }
+    .posts .posts_form button {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(160.2deg, #5037e9 0%, #4a20c4 100%);
+      -webkit-box-shadow: 4px 4px 25px rgba(42, 139, 242, 0.15), 2px 2px 25px rgba(42, 139, 242, 0.05), 4px 6px 10px rgba(42, 139, 242, 0.15);
+              box-shadow: 4px 4px 25px rgba(42, 139, 242, 0.15), 2px 2px 25px rgba(42, 139, 242, 0.05), 4px 6px 10px rgba(42, 139, 242, 0.15);
+      border-radius: 60px;
+      margin: auto 10px;
+      -webkit-appearance: none;
+         -moz-appearance: none;
+              appearance: none;
+      outline: none;
+      border: none;
+      cursor: pointer; }
 
 /*# sourceMappingURL=Posts.module.css.map */

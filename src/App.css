@@ -5,6 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;900&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -307,8 +308,16 @@ template {
 [hidden] {
   display: none; }
 
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: linear-gradient(160.72deg, #41025b 0%, #1a1a1a 100%); }
+
 .app-wrapper {
   display: grid;
+  font-family: "Poppins", sans-serif;
+  background: transparent;
   grid-template-areas: "header header " "nav main ";
   grid-template-rows: 60px 1fr;
   grid-template-columns: 2fr 10fr;
@@ -316,6 +325,6 @@ template {
 
 .main {
   grid-area: main;
-  background-color: lightblue; }
+  background-color: transparent; }
 
 /*# sourceMappingURL=App.css.map */
