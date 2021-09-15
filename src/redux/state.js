@@ -1,11 +1,13 @@
+import { rerenderEntireTree } from "../render";
+
 let state = {
   profilePage: {
     postsData: [
       {
         id: 1,
         postText: "This is easier then I thought",
-        like: "3",
-        date: "11:11",
+        like: 3,
+        // date: "11:11",
       },
       { id: 2, postText: "It's my first post here)", like: "4", date: "11:12" },
     ],
@@ -43,6 +45,16 @@ let state = {
       },
     ],
   },
+};
+
+export let addPost = (postMessage) => {
+  let newPost = {
+    id: 5,
+    postText: postMessage,
+    like: 0,
+  };
+  state.profilePage.postsData.push(newPost);
+  rerenderEntireTree(state);
 };
 
 export default state;
