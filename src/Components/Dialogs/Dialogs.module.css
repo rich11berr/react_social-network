@@ -44,15 +44,41 @@
     .dialogs .dialog_users .active {
       background: linear-gradient(160.2deg, #5037e9 0%, #4a20c4 100%); }
   .dialogs .dialog_messages {
+    position: relative;
     margin-left: 40px;
     display: flex;
     flex-direction: column;
-    background: #4d0c67;
+    background: linear-gradient(160.72deg, #41025b 0%, #1a1a1a 100%);
     width: 426px;
     height: 100%;
     margin-top: 20px;
     border-radius: 16px;
     box-shadow: 10px 10px 25px rgba(101, 18, 135, 0.1), 15px 15px 35px rgba(101, 18, 135, 0.05), 10px 10px 50px rgba(101, 18, 135, 0.1); }
+    .dialogs .dialog_messages .dialog_messagesInput {
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      bottom: 0px;
+      width: 95%;
+      height: 100px;
+      align-items: center;
+      justify-content: center; }
+      .dialogs .dialog_messages .dialog_messagesInput input {
+        width: 366px;
+        height: 72px;
+        background: #4d0c67;
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        color: white;
+        padding-left: 10px;
+        padding-right: 10px; }
+      .dialogs .dialog_messages .dialog_messagesInput button {
+        width: 72px;
+        height: 72px;
+        background: linear-gradient(160.2deg, #5037e9 0%, #4a20c4 100%);
+        box-shadow: 4px 4px 25px rgba(42, 139, 242, 0.15), 2px 2px 25px rgba(42, 139, 242, 0.05), 4px 6px 10px rgba(42, 139, 242, 0.15);
+        border-radius: 72px; }
     .dialogs .dialog_messages .dialog_message {
       margin-top: 40px;
       margin-left: 30px;

@@ -67,16 +67,44 @@ $bx_white: 10px 10px 25px rgba(112, 124, 151, 0.1),
     }
   }
   .dialog_messages {
+    position: relative;
     margin-left: 40px;
     display: flex;
     flex-direction: column;
-    background: $inactive_bg;
+    background: $main_bg;
     width: 426px;
     height: 100%;
     margin-top: 20px;
     border-radius: 16px;
     box-shadow: $bx_black;
-
+    .dialog_messagesInput {
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      bottom: 0px;
+      width: 95%;
+      height: 100px;
+      align-items: center;
+      justify-content: center;
+      input {
+        width: 366px;
+        height: 72px;
+        background: $inactive_bg;
+        border-radius: $br;
+        outline: none;
+        border: none;
+        color: white;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      button {
+        width: 72px;
+        height: 72px;
+        background: $active_bg;
+        box-shadow: $bx_blue;
+        border-radius: 72px;
+      }
+    }
     .dialog_message {
       margin-top: 40px;
       margin-left: 30px;
