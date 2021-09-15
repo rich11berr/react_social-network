@@ -6,15 +6,26 @@ import Header from "./Components/Header/Header";
 import Nav from "./Components/Nav/Nav";
 import Profile from "./Components/Profile/Profile";
 
-const App = () => {
+const App = (props) => {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
         <Header />
         <Nav />
         <main class="main">
-          <Route path="/Dialogs" component={Dialogs} />
-          <Route path="/Profile" component={Profile} />
+          <Route
+            path="/Dialogs"
+            render={() => (
+              <Dialogs
+                userData={props.userData}
+                messagesData={props.messagesData}
+              />
+            )}
+          />
+          <Route
+            path="/Profile"
+            render={() => <Profile postsData={props.postsData} />}
+          />
         </main>
       </div>
     </BrowserRouter>
