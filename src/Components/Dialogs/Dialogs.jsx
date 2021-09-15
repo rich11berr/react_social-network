@@ -5,11 +5,11 @@ import DialogUser from "./DialogUser/DialogUser";
 import Message from "./Message/Message";
 
 const Dialogs = (props) => {
-  let userItem = props.userData.map((user) => (
+  let userItem = props.state.userData.map((user) => (
     <DialogUser username={user.name} id={user.id} userImg={user.userImg} />
   ));
 
-  let messageItem = props.messagesData.map((message) => (
+  let messageItem = props.state.messagesData.map((message) => (
     <Message messageText={message.messageText} />
   ));
 
