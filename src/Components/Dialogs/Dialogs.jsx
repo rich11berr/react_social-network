@@ -3,16 +3,25 @@ import { NavLink } from "react-router-dom";
 import styles from "./Dialogs.module.css";
 
 const DialogUser = (props) => {
+  let path = "/dialogs/" + props.id;
   return (
     <div className={styles.dialog_user}>
       <div className={styles.dialog_userImg}>
         <img src={[props.userImg]} alt="dialog_userImg" />
       </div>
       <div className={styles.dialog_userText}>
-        <NavLink to={"/dialogs/" + props.id} activeClassName="active">
+        <NavLink to={path} activeClassName="active">
           {props.username}
         </NavLink>
       </div>
+    </div>
+  );
+};
+
+const Message = (props) => {
+  return (
+    <div className={styles.dialog_message}>
+      <p>{props.messageText}</p>
     </div>
   );
 };
@@ -43,15 +52,8 @@ const Dialogs = (props) => {
         />
       </div>
       <div className={styles.dialog_messages}>
-        <div className={styles.dialog_message}>
-          <p>Hello world</p>
-        </div>
-        <div className={styles.dialog_message}>
-          <p>Kek</p>
-        </div>
-        <div className={styles.dialog_message}>
-          <p>Lol</p>
-        </div>
+        <Message messageText="Yo" />
+        <Message messageText="Do this shit faster! =)" />
       </div>
     </div>
   );

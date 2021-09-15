@@ -2,41 +2,5 @@
   grid-area: main;
   border-top: 1px solid transparent;
   margin-top: 140px; }
-  .profile .profile_info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row; }
-    .profile .profile_info .profile_img {
-      width: 240px;
-      height: 250px;
-      border-radius: 30px;
-      -webkit-box-shadow: 10px 10px 25px rgba(101, 18, 135, 0.1), 15px 15px 35px rgba(101, 18, 135, 0.05), 10px 10px 50px rgba(101, 18, 135, 0.1);
-              box-shadow: 10px 10px 25px rgba(101, 18, 135, 0.1), 15px 15px 35px rgba(101, 18, 135, 0.05), 10px 10px 50px rgba(101, 18, 135, 0.1);
-      overflow: hidden; }
-      .profile .profile_info .profile_img img {
-        height: 100%;
-        width: auto;
-        margin: 0 -40px 0 -70px; }
-    .profile .profile_info .profile_text {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      margin-left: 20px; }
-      .profile .profile_info .profile_text p {
-        margin-top: 3px;
-        margin-left: 10px;
-        font-size: 22px;
-        color: white; }
-        .profile .profile_info .profile_text p:first-child {
-          font-weight: bold;
-          font-size: 30px; }
 
 /*# sourceMappingURL=Profile.module.css.map */
