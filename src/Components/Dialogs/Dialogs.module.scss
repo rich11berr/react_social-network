@@ -1,6 +1,23 @@
+$main_bg: linear-gradient(160.72deg, #41025b 0%, #1a1a1a 100%);
+$inactive_bg: #4d0c67;
+$active_bg: linear-gradient(160.2deg, #5037e9 0%, #4a20c4 100%);
+$red_bg: linear-gradient(146.08deg, #fa8867 0%, #fe5c5c 100%);
+$br: 20px;
+$bx_black: 10px 10px 25px rgba(101, 18, 135, 0.1),
+  15px 15px 35px rgba(101, 18, 135, 0.05),
+  10px 10px 50px rgba(101, 18, 135, 0.1);
+$bx_blue: 4px 4px 25px rgba(42, 139, 242, 0.15),
+  2px 2px 25px rgba(42, 139, 242, 0.05), 4px 6px 10px rgba(42, 139, 242, 0.15);
+$bx_white: 10px 10px 25px rgba(112, 124, 151, 0.1),
+  15px 15px 35px rgba(112, 124, 151, 0.05),
+  10px 10px 50px rgba(112, 124, 151, 0.1);
+
 .dialogs {
   display: grid;
   grid-template-columns: 2fr 10fr;
+  border-top: 1px solid transparent;
+  margin-top: 35px;
+  height: 100%;
   .dialog_users {
     display: flex;
     flex-direction: column;
@@ -8,32 +25,75 @@
     padding: 20px;
     .dialog_user {
       padding: 5px;
-      background-color: #fff;
       cursor: pointer;
-      a {
-        font-size: 17px;
-        font-weight: bold;
+      display: flex;
+      flex-direction: row;
+      width: 370px;
+      height: 100px;
+      background: $inactive_bg;
+      border-radius: $br;
+      box-shadow: $bx_black;
+      .dialog_userImg {
+        // margin: 10px auto;
+        margin-left: 20px;
+        width: 100px;
+        height: 100px;
+        border-radius: 30px;
+        box-shadow: $bx_black;
+        overflow: hidden;
+        img {
+          height: auto;
+          width: 100%;
+        }
+      }
+      .dialog_userText {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        a {
+          font-size: 17px;
+          font-weight: bold;
+          text-decoration: none;
+          margin-left: 15px;
+          color: white;
+        }
       }
       &:hover {
-        background-color: rgb(69, 69, 230);
+        background: $active_bg;
       }
     }
     .active {
-      background-color: rgb(69, 69, 230);
+      background: $active_bg;
     }
   }
   .dialog_messages {
-    margin-left: 20px;
+    margin-left: 40px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    border-left: 2px solid black;
-    padding: 20px;
+    background: $inactive_bg;
+    width: 426px;
+    height: 100%;
+    margin-top: 20px;
+    border-radius: 16px;
+    box-shadow: $bx_black;
+
     .dialog_message {
+      margin-top: 40px;
+      margin-left: 30px;
       padding: 5px;
-      background-color: #fff;
+      background: #651287;
       width: 200px;
       height: fit-content;
+      box-shadow: 10px 10px 25px rgba(101, 18, 135, 0.1),
+        15px 15px 35px rgba(101, 18, 135, 0.05),
+        10px 10px 50px rgba(101, 18, 135, 0.1);
+      border-radius: 0px 16px 16px 16px;
+      p {
+        color: white;
+        font-size: 14px;
+        line-height: 26px;
+        margin-left: 10px;
+      }
     }
   }
 }

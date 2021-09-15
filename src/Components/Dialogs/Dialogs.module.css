@@ -1,6 +1,9 @@
 .dialogs {
   display: grid;
-  grid-template-columns: 2fr 10fr; }
+  grid-template-columns: 2fr 10fr;
+  border-top: 1px solid transparent;
+  margin-top: 35px;
+  height: 100%; }
   .dialogs .dialog_users {
     display: flex;
     flex-direction: column;
@@ -8,26 +11,61 @@
     padding: 20px; }
     .dialogs .dialog_users .dialog_user {
       padding: 5px;
-      background-color: #fff;
-      cursor: pointer; }
-      .dialogs .dialog_users .dialog_user a {
-        font-size: 17px;
-        font-weight: bold; }
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      width: 370px;
+      height: 100px;
+      background: #4d0c67;
+      border-radius: 20px;
+      box-shadow: 10px 10px 25px rgba(101, 18, 135, 0.1), 15px 15px 35px rgba(101, 18, 135, 0.05), 10px 10px 50px rgba(101, 18, 135, 0.1); }
+      .dialogs .dialog_users .dialog_user .dialog_userImg {
+        margin-left: 20px;
+        width: 100px;
+        height: 100px;
+        border-radius: 30px;
+        box-shadow: 10px 10px 25px rgba(101, 18, 135, 0.1), 15px 15px 35px rgba(101, 18, 135, 0.05), 10px 10px 50px rgba(101, 18, 135, 0.1);
+        overflow: hidden; }
+        .dialogs .dialog_users .dialog_user .dialog_userImg img {
+          height: auto;
+          width: 100%; }
+      .dialogs .dialog_users .dialog_user .dialog_userText {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column; }
+        .dialogs .dialog_users .dialog_user .dialog_userText a {
+          font-size: 17px;
+          font-weight: bold;
+          text-decoration: none;
+          margin-left: 15px;
+          color: white; }
       .dialogs .dialog_users .dialog_user:hover {
-        background-color: #4545e6; }
+        background: linear-gradient(160.2deg, #5037e9 0%, #4a20c4 100%); }
     .dialogs .dialog_users .active {
-      background-color: #4545e6; }
+      background: linear-gradient(160.2deg, #5037e9 0%, #4a20c4 100%); }
   .dialogs .dialog_messages {
-    margin-left: 20px;
+    margin-left: 40px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    border-left: 2px solid black;
-    padding: 20px; }
+    background: #4d0c67;
+    width: 426px;
+    height: 100%;
+    margin-top: 20px;
+    border-radius: 16px;
+    box-shadow: 10px 10px 25px rgba(101, 18, 135, 0.1), 15px 15px 35px rgba(101, 18, 135, 0.05), 10px 10px 50px rgba(101, 18, 135, 0.1); }
     .dialogs .dialog_messages .dialog_message {
+      margin-top: 40px;
+      margin-left: 30px;
       padding: 5px;
-      background-color: #fff;
+      background: #651287;
       width: 200px;
-      height: fit-content; }
+      height: fit-content;
+      box-shadow: 10px 10px 25px rgba(101, 18, 135, 0.1), 15px 15px 35px rgba(101, 18, 135, 0.05), 10px 10px 50px rgba(101, 18, 135, 0.1);
+      border-radius: 0px 16px 16px 16px; }
+      .dialogs .dialog_messages .dialog_message p {
+        color: white;
+        font-size: 14px;
+        line-height: 26px;
+        margin-left: 10px; }
 
 /*# sourceMappingURL=Dialogs.module.css.map */
