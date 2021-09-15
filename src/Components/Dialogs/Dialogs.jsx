@@ -2,6 +2,47 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./Dialogs.module.css";
 
+const DialogUser = (props) => {
+  let path = "/dialogs/" + props.id;
+  return (
+    <div className={styles.dialog_user}>
+      <div className={styles.dialog_userImg}>
+        <img src={[props.userImg]} alt="dialog_userImg" />
+      </div>
+      <div className={styles.dialog_userText}>
+        <NavLink to={path} activeClassName="active">
+          {props.username}
+        </NavLink>
+      </div>
+    </div>
+  );
+};
+
+const Message = (props) => {
+  return (
+    <div className={styles.dialog_message}>
+      <p>{props.messageText}</p>
+    </div>
+  );
+};
+
+const Dialogs = (props) => {
+  let userItem = userData.map((user) => (
+    <DialogUser username={user.name} id={user.id} userImg={user.userImg} />
+  ));
+
+  let messageItem = messagesData.map((message) => (
+    <Message messageText={message.messageText} />
+  ));
+
+  return (
+    <div className={styles.dialogs}>
+      <div className={styles.dialog_users}>{userItem}</div>
+      <div className={styles.dialog_messages}>{messageItem}</div>
+    </div>
+  );
+};
+
 let userData = [
   {
     id: 1,
@@ -30,67 +71,9 @@ let userData = [
 ];
 
 let messagesData = [
-  { id: 1, message: "Yo", date: "11:11" },
-  { id: 2, message: "Do this shit faster", date: "11:12" },
-  { id: 3, message: "U can do it!", date: "11:13" },
+  { id: 1, messageText: "Yo", date: "11:11" },
+  { id: 2, messageText: "Do this shit faster", date: "11:12" },
+  { id: 3, messageText: "U can do it!", date: "11:13" },
 ];
-
-const DialogUser = (props) => {
-  let path = "/dialogs/" + props.id;
-  return (
-    <div className={styles.dialog_user}>
-      <div className={styles.dialog_userImg}>
-        <img src={[props.userImg]} alt="dialog_userImg" />
-      </div>
-      <div className={styles.dialog_userText}>
-        <NavLink to={path} activeClassName="active">
-          {props.username}
-        </NavLink>
-      </div>
-    </div>
-  );
-};
-
-const Message = (props) => {
-  return (
-    <div className={styles.dialog_message}>
-      <p>{props.messageText}</p>
-    </div>
-  );
-};
-
-const Dialogs = (props) => {
-  return (
-    <div className={styles.dialogs}>
-      <div className={styles.dialog_users}>
-        <DialogUser
-          username={userData[0].name}
-          id={userData[0].id}
-          userImg={userData[0].userImg}
-        />
-        <DialogUser
-          username={userData[1].name}
-          id={userData[1].id}
-          userImg={userData[1].userImg}
-        />
-        <DialogUser
-          username={userData[2].name}
-          id={userData[2].id}
-          userImg={userData[2].userImg}
-        />
-        <DialogUser
-          username={userData[3].name}
-          id={userData[3].id}
-          userImg={userData[3].userImg}
-        />
-      </div>
-      <div className={styles.dialog_messages}>
-        <Message messageText={messagesData[0].message} />
-        <Message messageText={messagesData[1].message} />
-        <Message messageText={messagesData[2].message} />
-      </div>
-    </div>
-  );
-};
 
 export default Dialogs;

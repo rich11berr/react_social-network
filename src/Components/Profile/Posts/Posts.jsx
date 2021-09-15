@@ -12,7 +12,15 @@ let postsData = [
   { id: 2, postText: "It's my first post here)", like: "4", date: "11:12" },
 ];
 
+let postsItem = postsData.map((post) => (
+  <Post message={post.postText} like={post.like} />
+));
+
 const Posts = () => {
+  let postsItem = postsData.map((post) => (
+    <Post message={post.postText} like={post.like} />
+  ));
+
   return (
     <div className={styles.posts}>
       <h2>My posts</h2>
@@ -20,8 +28,7 @@ const Posts = () => {
         <input placeholder="Type here..." />
         <button>send</button>
       </div>
-      <Post message={postsData[0].postText} like={postsData[0].like} />
-      <Post message={postsData[1].postText} like={postsData[1].like} />
+      {postsItem}
     </div>
   );
 };
