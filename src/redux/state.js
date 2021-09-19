@@ -19,11 +19,14 @@ let state = {
     newPostText: "",
   },
   dialogsPage: {
-    messagesData: [
-      { id: 1, messageText: "Yo", date: "11:11" },
-      { id: 2, messageText: "Do this shit faster", date: "11:12" },
-      { id: 3, messageText: "U can do it!", date: "11:13" },
-    ],
+    messagesData: {
+      incomeMessagesData: [
+        { id: 1, messageText: "Yo", date: "11:11" },
+        { id: 2, messageText: "Do this shit faster", date: "11:12" },
+        { id: 3, messageText: "U can do it!", date: "11:13" },
+      ],
+      yourMessagesData: [{ id: 1, messageText: "Yo", date: "11:14" }],
+    },
     userData: [
       {
         id: 1,
@@ -50,11 +53,13 @@ let state = {
           "https://images.unsplash.com/photo-1620167972495-b6b7bdf32c5a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
       },
     ],
+    newMessageText: "",
   },
 };
 
 window.state = state;
 
+// ProfilePage
 export let addPost = () => {
   let newPost = {
     id: 5,
@@ -68,6 +73,22 @@ export let addPost = () => {
 
 export let updateNewPostText = (newText) => {
   state.profilePage.newPostText = newText;
+  rerenderEntireTree(state);
+};
+
+//Messages
+export let addMessage = () => {
+  let newMessage = {
+    id: 2,
+    messageText: state.dialogsPage.newMessageText,
+    date: "11:14",
+  };
+  state.dialogsPage.messagesData.yourMessagesData.push(newMessage);
+  state.dialogsPage.newMessageText = " ";
+  rerenderEntireTree(state);
+};
+export let updateMessageText = (newText) => {
+  state.dialogsPage.newMessageText = newText;
   rerenderEntireTree(state);
 };
 

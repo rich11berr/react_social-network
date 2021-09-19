@@ -7,7 +7,12 @@ const DialogUser = (props) => {
   return (
     <div className={styles.dialog_user}>
       <div className={styles.dialog_userImg}>
-        <img src={[props.userImg]} alt="dialog_userImg" />
+        <img
+          src={[props.userImg]}
+          alt="dialog_userImg"
+          width="100px"
+          height="auto"
+        />
       </div>
       <div className={styles.dialog_userText}>
         <NavLink to={path} activeClassName="active">

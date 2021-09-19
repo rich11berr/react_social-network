@@ -26,9 +26,6 @@
         border-radius: 30px;
         box-shadow: 10px 10px 25px rgba(101, 18, 135, 0.1), 15px 15px 35px rgba(101, 18, 135, 0.05), 10px 10px 50px rgba(101, 18, 135, 0.1);
         overflow: hidden; }
-        .dialogs .dialog_users .dialog_user .dialog_userImg img {
-          height: auto;
-          width: 100%; }
       .dialogs .dialog_users .dialog_user .dialog_userText {
         margin-top: 10px;
         display: flex;
@@ -44,25 +41,17 @@
     .dialogs .dialog_users .active {
       background: linear-gradient(160.2deg, #5037e9 0%, #4a20c4 100%); }
   .dialogs .dialog_messages {
-    position: relative;
-    margin-left: 40px;
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(160.72deg, #41025b 0%, #1a1a1a 100%);
     width: 426px;
-    height: 100%;
-    margin-top: 20px;
-    border-radius: 16px;
-    box-shadow: 10px 10px 25px rgba(101, 18, 135, 0.1), 15px 15px 35px rgba(101, 18, 135, 0.05), 10px 10px 50px rgba(101, 18, 135, 0.1); }
+    height: 600px; }
     .dialogs .dialog_messages .dialog_messagesInput {
-      position: absolute;
       display: flex;
       flex-direction: row;
       bottom: 0px;
-      width: 95%;
+      width: 100%;
       height: 100px;
       align-items: center;
-      justify-content: center; }
+      justify-content: center;
+      gap: 10px; }
       .dialogs .dialog_messages .dialog_messagesInput input {
         width: 366px;
         height: 72px;
@@ -79,19 +68,46 @@
         background: linear-gradient(160.2deg, #5037e9 0%, #4a20c4 100%);
         box-shadow: 4px 4px 25px rgba(42, 139, 242, 0.15), 2px 2px 25px rgba(42, 139, 242, 0.05), 4px 6px 10px rgba(42, 139, 242, 0.15);
         border-radius: 72px; }
-    .dialogs .dialog_messages .dialog_message {
-      margin-top: 40px;
-      margin-left: 30px;
-      padding: 5px;
-      background: #651287;
-      width: 200px;
-      height: fit-content;
-      box-shadow: 10px 10px 25px rgba(112, 124, 151, 0.1), 15px 15px 35px rgba(112, 124, 151, 0.05), 10px 10px 50px rgba(112, 124, 151, 0.1);
-      border-radius: 0px 16px 16px 16px; }
-      .dialogs .dialog_messages .dialog_message p {
-        color: white;
-        font-size: 14px;
-        line-height: 26px;
-        margin-left: 10px; }
+    .dialogs .dialog_messages .dialog_messagesWrapper {
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(160.72deg, #41025b 0%, #1a1a1a 100%);
+      width: 426px;
+      height: 600px;
+      overflow-y: scroll;
+      border-radius: 16px;
+      box-shadow: 10px 10px 25px rgba(112, 124, 151, 0.1), 15px 15px 35px rgba(112, 124, 151, 0.05), 10px 10px 50px rgba(112, 124, 151, 0.1); }
+      .dialogs .dialog_messages .dialog_messagesWrapper::-webkit-scrollbar {
+        width: 0px;
+        background: transparent; }
+      .dialogs .dialog_messages .dialog_messagesWrapper .dialog_messageIncome {
+        margin-top: 20px;
+        margin-left: 30px;
+        padding: 5px;
+        background: #651287;
+        width: 200px;
+        height: fit-content;
+        box-shadow: 10px 10px 25px rgba(112, 124, 151, 0.1), 15px 15px 35px rgba(112, 124, 151, 0.05), 10px 10px 50px rgba(112, 124, 151, 0.1);
+        border-radius: 0px 16px 16px 16px; }
+        .dialogs .dialog_messages .dialog_messagesWrapper .dialog_messageIncome p {
+          color: white;
+          font-size: 14px;
+          line-height: 26px;
+          margin-left: 10px; }
+      .dialogs .dialog_messages .dialog_messagesWrapper .dialog_messageYour {
+        margin-top: 20px;
+        padding: 5px;
+        background: linear-gradient(160.2deg, #5037e9 0%, #4a20c4 100%);
+        width: 200px;
+        height: fit-content;
+        box-shadow: 10px 10px 25px rgba(112, 124, 151, 0.1), 15px 15px 35px rgba(112, 124, 151, 0.05), 10px 10px 50px rgba(112, 124, 151, 0.1);
+        border-radius: 0px 16px 16px 16px;
+        order: 2;
+        margin-left: auto; }
+        .dialogs .dialog_messages .dialog_messagesWrapper .dialog_messageYour p {
+          color: white;
+          font-size: 14px;
+          line-height: 26px;
+          margin-left: 10px; }
 
 /*# sourceMappingURL=Dialogs.module.css.map */

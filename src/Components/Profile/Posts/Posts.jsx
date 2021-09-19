@@ -10,7 +10,11 @@ const Posts = (props) => {
   let newPostElement = React.createRef();
 
   let addPost = () => {
-    props.addPost();
+    if (newPostElement.current.value == 0) {
+      return 0;
+    } else {
+      props.addPost();
+    }
   };
 
   let onPostChange = () => {

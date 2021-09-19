@@ -20,11 +20,11 @@ $bx_white: 10px 10px 25px rgba(112, 124, 151, 0.1),
     height: 250px;
     border-radius: 30px;
     box-shadow: $bx_black;
+    position: relative;
     overflow: hidden;
     img {
-      height: 100%;
-      width: auto;
-      margin: 0 -40px 0 -70px;
+      position: absolute;
+      left: -65px;
     }
   }
   .profile_text {

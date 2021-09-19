@@ -21,10 +21,14 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+#root {
+  height: 100%;
+}
 .app-wrapper {
   display: grid;
   font-family: "Poppins", sans-serif;
   background: transparent;
+  height: 100%;
 
   grid-template-areas:
     "header header "
@@ -35,8 +39,5 @@ body {
   grid-gap: 10px;
 }
 .main {
-  // height: 100%;
   grid-area: main;
-  // background-color: transparent;
-  // overflow-y: scroll;
 }
