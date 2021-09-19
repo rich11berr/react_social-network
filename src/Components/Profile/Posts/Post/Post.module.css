@@ -16,17 +16,21 @@
   .post img {
     margin: auto 5px; }
   .post p {
+    margin-left: 10px;
     font-size: 15px; }
     .post p:first-of-type {
       font-size: 17px;
       font-weight: bold; }
-  .post span {
+  .post button {
     font-size: 12px;
     font-weight: 300;
     position: absolute;
+    outline: none;
+    border: none;
     right: 10px;
     bottom: -25px;
     cursor: pointer;
-    color: white; }
+    color: white;
+    background: transparent; }
 
 /*# sourceMappingURL=Post.module.css.map */

@@ -25,19 +25,23 @@ $bx_white: 10px 10px 25px rgba(112, 124, 151, 0.1),
     margin: auto 5px;
   }
   p {
+    margin-left: 10px;
     font-size: 15px;
     &:first-of-type {
       font-size: 17px;
       font-weight: bold;
     }
   }
-  span {
+  button {
     font-size: 12px;
     font-weight: 300;
     position: absolute;
+    outline: none;
+    border: none;
     right: 10px;
     bottom: -25px;
     cursor: pointer;
     color: white;
+    background: transparent;
   }
 }
