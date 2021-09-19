@@ -310,9 +310,10 @@ template {
 
 html,
 body {
-  margin: 0;
   height: 100%;
-  background: linear-gradient(160.72deg, #41025b 0%, #1a1a1a 100%); }
+  background: linear-gradient(160.72deg, #41025b 0%, #1a1a1a 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
 
 .app-wrapper {
   display: grid;
@@ -324,7 +325,6 @@ body {
   grid-gap: 10px; }
 
 .main {
-  grid-area: main;
-  background-color: transparent; }
+  grid-area: main; }
 
 /*# sourceMappingURL=App.css.map */

@@ -3,7 +3,7 @@
 $main_bg: linear-gradient(160.72deg, #41025b 0%, #1a1a1a 100%);
 $inactive_bg: #4d0c67;
 $active_bg: linear-gradient(160.2deg, #5037e9 0%, #4a20c4 100%);
-$red_bg: linear-gradient(146.08deg, #fa8867 0%, #fe5c5c 100%);
+$red_bg: repeating-linear-gradient(146.08deg, #fa8867 0%, #fe5c5c 100%);
 $br: 20px;
 $bx_black: 10px 10px 25px rgba(101, 18, 135, 0.1),
   15px 15px 35px rgba(101, 18, 135, 0.05),
@@ -16,9 +16,10 @@ $bx_white: 10px 10px 25px rgba(112, 124, 151, 0.1),
 
 html,
 body {
-  margin: 0;
   height: 100%;
   background: $main_bg;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 .app-wrapper {
   display: grid;
@@ -34,6 +35,8 @@ body {
   grid-gap: 10px;
 }
 .main {
+  // height: 100%;
   grid-area: main;
-  background-color: transparent;
+  // background-color: transparent;
+  // overflow-y: scroll;
 }
