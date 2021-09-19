@@ -5,12 +5,18 @@ let state = {
     postsData: [
       {
         id: 1,
-        postText: "This is easier then I thought",
+        postText: "It's my first post here)",
         like: 3,
         // date: "11:11",
       },
-      { id: 2, postText: "It's my first post here)", like: "4", date: "11:12" },
+      {
+        id: 2,
+        postText: "This is easier then I thought ",
+        like: "4",
+        date: "11:12",
+      },
     ],
+    newPostText: "",
   },
   dialogsPage: {
     messagesData: [
@@ -47,13 +53,21 @@ let state = {
   },
 };
 
-export let addPost = (postMessage) => {
+window.state = state;
+
+export let addPost = () => {
   let newPost = {
     id: 5,
-    postText: postMessage,
+    postText: state.profilePage.newPostText,
     like: 0,
   };
   state.profilePage.postsData.push(newPost);
+  state.profilePage.newPostText = " ";
+  rerenderEntireTree(state);
+};
+
+export let updateNewPostText = (newText) => {
+  state.profilePage.newPostText = newText;
   rerenderEntireTree(state);
 };
 

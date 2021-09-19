@@ -10,16 +10,24 @@ const Posts = (props) => {
   let newPostElement = React.createRef();
 
   let addPost = () => {
+    props.addPost();
+  };
+
+  let onPostChange = () => {
     let text = newPostElement.current.value;
-    props.addPost(text);
-    newPostElement.current.value = "";
+    props.updateNewPostText(text);
   };
 
   return (
     <div className={styles.posts}>
       <h2>My posts</h2>
       <div className={styles.posts_form}>
-        <input placeholder="Type here..." ref={newPostElement} />
+        <input
+          onChange={onPostChange}
+          placeholder="Type here..."
+          ref={newPostElement}
+          value={props.newPostText}
+        />
         <button onClick={addPost}>send</button>
       </div>
       {postsItem}
