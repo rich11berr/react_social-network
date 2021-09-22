@@ -12,7 +12,7 @@ let store = {
                     id: 2,
                     postText: "This is easier then I thought ",
                     like: "4",
-                    date: "11:12",
+                    // date: "11:12",
                 },
             ],
             newPostText: "",
@@ -62,39 +62,40 @@ let store = {
     getState() {
         return this._state;
     },
-    callSubscriber() {
+    _callSubscriber() {
         console.log("State was changed");
     },
-    addPost() {
-        let newPost = {
-            id: 5,
-            postText: this._state.profilePage.newPostText,
-            like: 0,
-        };
-        this._state.profilePage.postsData.push(newPost);
-        this._state.profilePage.newPostText = " ";
-        this.callSubscriber(this._state);
-    },
-    updateNewPostText(newText) {
-        this._state.profilePage.newPostText = newText;
-        this.callSubscriber(this._state);
-    },
-    addMessage() {
-        let newMessage = {
-            id: 2,
-            messageText: this._state.dialogsPage.newMessageText,
-            date: "11:14",
-        };
-        this._state.dialogsPage.messagesData.yourMessagesData.push(newMessage);
-        this._state.dialogsPage.newMessageText = " ";
-        this.callSubscriber(this._state);
-    },
-    updateMessageText(newText) {
-        this._state.dialogsPage.newMessageText = newText;
-        this.callSubscriber(this._state);
-    },
     subscribe(observer) {
-        this.callSubscriber = observer;
+        this._callSubscriber = observer;
+    },
+    dispatch(action) {
+        if (action.type === "ADD-POST") {
+            let newPost = {
+                id: 5,
+                postText: this._state.profilePage.newPostText,
+                like: 0,
+            };
+            this._state.profilePage.postsData.push(newPost);
+            this._state.profilePage.newPostText = " ";
+            this._callSubscriber(this._state);
+        } else if (action.type === "UPDATE-NEW-POST-TEXT") {
+            this._state.profilePage.newPostText = action.newText;
+            this._callSubscriber(this._state);
+        } else if (action.type === "ADD-MESSAGE") {
+            let newMessage = {
+                id: 2,
+                messageText: this._state.dialogsPage.newMessageText,
+                date: "11:14",
+            };
+            this._state.dialogsPage.messagesData.yourMessagesData.push(
+                newMessage
+            );
+            this._state.dialogsPage.newMessageText = " ";
+            this._callSubscriber(this._state);
+        } else if (action.type === "UPDATE-MESSAGE-TEXT") {
+            this._state.dialogsPage.newMessageText = action.newText;
+            this._callSubscriber(this._state);
+        }
     },
 };
 

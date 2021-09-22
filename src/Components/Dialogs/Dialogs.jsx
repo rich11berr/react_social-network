@@ -33,13 +33,13 @@ const Dialogs = (props) => {
 
     let onMessageChange = () => {
         let text = newMessageElement.current.value;
-        props.updateMessageText(text);
+        props.dispatch({ type: "UPDATE-MESSAGE-TEXT", newText: text });
     };
     let addMessage = () => {
         if (newMessageElement.current.value == 0) {
             return 0;
         } else {
-            props.addMessage();
+            props.dispatch({ type: "ADD-MESSAGE" });
         }
     };
 
@@ -47,8 +47,6 @@ const Dialogs = (props) => {
         <div className={styles.dialogs}>
             <div className={styles.dialog_users}>{userItem}</div>
             <div className={styles.dialog_messages}>
-                {/* {messageIncomeItem}
-        {messageYourItem} */}
                 <div className={styles.dialog_messagesWrapper}>
                     {messageItem()}
                 </div>
