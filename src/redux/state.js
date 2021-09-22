@@ -1,3 +1,8 @@
+const ADD_POST = "ADD-POST";
+const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
+const UPDATE_MESSAGE_TEXT = "UPDATE-MESSAGE-TEXT";
+const ADD_MESSAGE = "ADD-MESSAGE";
+
 let store = {
     _state: {
         profilePage: {
@@ -97,6 +102,22 @@ let store = {
             this._callSubscriber(this._state);
         }
     },
+};
+
+export const addPostActionCreator = () => {
+    return { type: ADD_POST };
+};
+
+export const onPostChangeActionCreator = (text) => {
+    return { type: UPDATE_NEW_POST_TEXT, newText: text };
+};
+
+export const addMessageActionCreator = () => {
+    return { type: ADD_MESSAGE };
+};
+
+export const onMessageChangeActionCreator = (text) => {
+    return { type: UPDATE_MESSAGE_TEXT, newText: text };
 };
 
 window.store = store;
