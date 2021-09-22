@@ -4,17 +4,17 @@ $active_bg: linear-gradient(160.2deg, #5037e9 0%, #4a20c4 100%);
 $red_bg: linear-gradient(146.08deg, #fa8867 0%, #fe5c5c 100%);
 $br: 20px;
 $bx_black: 10px 10px 25px rgba(101, 18, 135, 0.1),
-  15px 15px 35px rgba(101, 18, 135, 0.05),
-  10px 10px 50px rgba(101, 18, 135, 0.1);
+    15px 15px 35px rgba(101, 18, 135, 0.05),
+    10px 10px 50px rgba(101, 18, 135, 0.1);
 $bx_blue: 4px 4px 25px rgba(42, 139, 242, 0.15),
-  2px 2px 25px rgba(42, 139, 242, 0.05), 4px 6px 10px rgba(42, 139, 242, 0.15);
+    2px 2px 25px rgba(42, 139, 242, 0.05), 4px 6px 10px rgba(42, 139, 242, 0.15);
 $bx_white: 10px 10px 25px rgba(112, 124, 151, 0.1),
-  15px 15px 35px rgba(112, 124, 151, 0.05),
-  10px 10px 50px rgba(112, 124, 151, 0.1);
+    15px 15px 35px rgba(112, 124, 151, 0.05),
+    10px 10px 50px rgba(112, 124, 151, 0.1);
 
 .profile {
-  grid-area: main;
-  // display: flex;
-  border-top: 1px solid transparent;
-  margin-top: 140px;
+    grid-area: main;
+    // display: flex;
+    border-top: 1px solid transparent;
+    margin-top: 140px;
 }

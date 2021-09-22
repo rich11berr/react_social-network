@@ -4,44 +4,44 @@ $active_bg: linear-gradient(160.2deg, #5037e9 0%, #4a20c4 100%);
 $red_bg: linear-gradient(146.08deg, #fa8867 0%, #fe5c5c 100%);
 $br: 20px;
 $bx_black: 10px 10px 25px rgba(101, 18, 135, 0.1),
-  15px 15px 35px rgba(101, 18, 135, 0.05),
-  10px 10px 50px rgba(101, 18, 135, 0.1);
+    15px 15px 35px rgba(101, 18, 135, 0.05),
+    10px 10px 50px rgba(101, 18, 135, 0.1);
 $bx_blue: 4px 4px 25px rgba(42, 139, 242, 0.15),
-  2px 2px 25px rgba(42, 139, 242, 0.05), 4px 6px 10px rgba(42, 139, 242, 0.15);
+    2px 2px 25px rgba(42, 139, 242, 0.05), 4px 6px 10px rgba(42, 139, 242, 0.15);
 $bx_white: 10px 10px 25px rgba(112, 124, 151, 0.1),
-  15px 15px 35px rgba(112, 124, 151, 0.05),
-  10px 10px 50px rgba(112, 124, 151, 0.1);
+    15px 15px 35px rgba(112, 124, 151, 0.05),
+    10px 10px 50px rgba(112, 124, 151, 0.1);
 
 .post {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row;
-  background-color: #fff;
-  position: relative;
-  width: 30%;
-  border-radius: $br;
-  box-shadow: $bx_white;
-  img {
-    margin: auto 5px;
-  }
-  p {
-    margin-left: 10px;
-    font-size: 15px;
-    &:first-of-type {
-      font-size: 17px;
-      font-weight: bold;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    position: relative;
+    width: 30%;
+    border-radius: $br;
+    box-shadow: $bx_white;
+    img {
+        margin: auto 5px;
     }
-  }
-  button {
-    font-size: 12px;
-    font-weight: 300;
-    position: absolute;
-    outline: none;
-    border: none;
-    right: 10px;
-    bottom: -25px;
-    cursor: pointer;
-    color: white;
-    background: transparent;
-  }
+    p {
+        margin-left: 10px;
+        font-size: 15px;
+        &:first-of-type {
+            font-size: 17px;
+            font-weight: bold;
+        }
+    }
+    button {
+        font-size: 12px;
+        font-weight: 300;
+        position: absolute;
+        outline: none;
+        border: none;
+        right: 10px;
+        bottom: -25px;
+        cursor: pointer;
+        color: white;
+        background: transparent;
+    }
 }

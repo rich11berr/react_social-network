@@ -4,141 +4,141 @@ $active_bg: linear-gradient(160.2deg, #5037e9 0%, #4a20c4 100%);
 $red_bg: linear-gradient(146.08deg, #fa8867 0%, #fe5c5c 100%);
 $br: 20px;
 $bx_black: 10px 10px 25px rgba(101, 18, 135, 0.1),
-  15px 15px 35px rgba(101, 18, 135, 0.05),
-  10px 10px 50px rgba(101, 18, 135, 0.1);
+    15px 15px 35px rgba(101, 18, 135, 0.05),
+    10px 10px 50px rgba(101, 18, 135, 0.1);
 $bx_blue: 4px 4px 25px rgba(42, 139, 242, 0.15),
-  2px 2px 25px rgba(42, 139, 242, 0.05), 4px 6px 10px rgba(42, 139, 242, 0.15);
+    2px 2px 25px rgba(42, 139, 242, 0.05), 4px 6px 10px rgba(42, 139, 242, 0.15);
 $bx_white: 10px 10px 25px rgba(112, 124, 151, 0.1),
-  15px 15px 35px rgba(112, 124, 151, 0.05),
-  10px 10px 50px rgba(112, 124, 151, 0.1);
+    15px 15px 35px rgba(112, 124, 151, 0.05),
+    10px 10px 50px rgba(112, 124, 151, 0.1);
 
 .dialogs {
-  display: grid;
-  grid-template-columns: 2fr 10fr;
-  border-top: 1px solid transparent;
-  margin-top: 35px;
-  height: 100%;
-  .dialog_users {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-    .dialog_user {
-      padding: 5px;
-      cursor: pointer;
-      display: flex;
-      flex-direction: row;
-      width: 370px;
-      height: 100px;
-      background: $inactive_bg;
-      border-radius: $br;
-      box-shadow: $bx_black;
-      .dialog_userImg {
-        // margin: 10px auto;
-        margin-left: 20px;
-        width: 100px;
-        height: 100px;
-        border-radius: 30px;
-        box-shadow: $bx_black;
-        overflow: hidden;
-      }
-      .dialog_userText {
-        margin-top: 10px;
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    border-top: 1px solid transparent;
+    margin-top: 35px;
+    height: 100%;
+    .dialog_users {
         display: flex;
         flex-direction: column;
-        a {
-          font-size: 17px;
-          font-weight: bold;
-          text-decoration: none;
-          margin-left: 15px;
-          color: white;
+        gap: 20px;
+        padding: 20px;
+        .dialog_user {
+            padding: 5px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            width: 370px;
+            height: 100px;
+            background: $inactive_bg;
+            border-radius: $br;
+            box-shadow: $bx_black;
+            .dialog_userImg {
+                // margin: 10px auto;
+                margin-left: 20px;
+                width: 100px;
+                height: 100px;
+                border-radius: 30px;
+                box-shadow: $bx_black;
+                overflow: hidden;
+            }
+            .dialog_userText {
+                margin-top: 10px;
+                display: flex;
+                flex-direction: column;
+                a {
+                    font-size: 17px;
+                    font-weight: bold;
+                    text-decoration: none;
+                    margin-left: 15px;
+                    color: white;
+                }
+            }
+            &:hover {
+                background: $active_bg;
+            }
         }
-      }
-      &:hover {
-        background: $active_bg;
-      }
-    }
-    .active {
-      background: $active_bg;
-    }
-  }
-  .dialog_messages {
-    width: 426px;
-    height: 600px;
-    .dialog_messagesInput {
-      display: flex;
-      flex-direction: row;
-      bottom: 0px;
-      width: 100%;
-      height: 100px;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      input {
-        width: 366px;
-        height: 72px;
-        background: $inactive_bg;
-        border-radius: $br;
-        outline: none;
-        border: none;
-        color: white;
-        padding-left: 10px;
-        padding-right: 10px;
-      }
-      button {
-        width: 72px;
-        height: 72px;
-        background: $active_bg;
-        box-shadow: $bx_blue;
-        border-radius: 72px;
-      }
-    }
-    .dialog_messagesWrapper {
-      display: flex;
-      flex-direction: column;
-      background: $main_bg;
-      width: 426px;
-      height: 600px;
-      overflow-y: scroll;
-      &::-webkit-scrollbar {
-        width: 0px;
-        background: transparent;
-      }
-      border-radius: 16px;
-      box-shadow: $bx_white;
-      .dialog_messageIncome {
-        margin-top: 20px;
-        margin-left: 30px;
-        padding: 5px;
-        background: #651287;
-        width: 200px;
-        height: fit-content;
-        box-shadow: $bx_white;
-        border-radius: 0px 16px 16px 16px;
-        p {
-          color: white;
-          font-size: 14px;
-          line-height: 26px;
-          margin-left: 10px;
+        .active {
+            background: $active_bg;
         }
-      }
-      .dialog_messageYour {
-        margin-top: 20px;
-        padding: 5px;
-        background: $active_bg;
-        width: 200px;
-        height: fit-content;
-        box-shadow: $bx_white;
-        border-radius: 0px 16px 16px 16px;
-        order: 2;
-        margin-left: auto;
-        p {
-          color: white;
-          font-size: 14px;
-          line-height: 26px;
-          margin-left: 10px;
-        }
-      }
     }
-  }
+    .dialog_messages {
+        width: 426px;
+        height: 600px;
+        .dialog_messagesInput {
+            display: flex;
+            flex-direction: row;
+            bottom: 0px;
+            width: 100%;
+            height: 100px;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            input {
+                width: 366px;
+                height: 72px;
+                background: $inactive_bg;
+                border-radius: $br;
+                outline: none;
+                border: none;
+                color: white;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            button {
+                width: 72px;
+                height: 72px;
+                background: $active_bg;
+                box-shadow: $bx_blue;
+                border-radius: 72px;
+            }
+        }
+        .dialog_messagesWrapper {
+            display: flex;
+            flex-direction: column;
+            background: $main_bg;
+            width: 426px;
+            height: 600px;
+            overflow-y: scroll;
+            &::-webkit-scrollbar {
+                width: 0px;
+                background: transparent;
+            }
+            border-radius: 16px;
+            box-shadow: $bx_white;
+            .dialog_messageIncome {
+                margin-top: 20px;
+                margin-left: 30px;
+                padding: 5px;
+                background: #651287;
+                width: 200px;
+                height: fit-content;
+                box-shadow: $bx_white;
+                border-radius: 0px 16px 16px 16px;
+                p {
+                    color: white;
+                    font-size: 14px;
+                    line-height: 26px;
+                    margin-left: 10px;
+                }
+            }
+            .dialog_messageYour {
+                margin-top: 20px;
+                padding: 5px;
+                background: $active_bg;
+                width: 200px;
+                height: fit-content;
+                box-shadow: $bx_white;
+                border-radius: 0px 16px 16px 16px;
+                order: 2;
+                margin-left: auto;
+                p {
+                    color: white;
+                    font-size: 14px;
+                    line-height: 26px;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
 }
