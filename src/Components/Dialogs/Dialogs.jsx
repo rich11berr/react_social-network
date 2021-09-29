@@ -1,35 +1,24 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import {
-    addMessageActionCreator,
-    onMessageChangeActionCreator,
-} from "../../redux/dialogs-reducer";
 import styles from "./Dialogs.module.css";
 import DialogUser from "./DialogUser/DialogUser";
 import IncomeMessage from "./Message/IncomeMessage";
 import YourMessage from "./Message/YourMessage";
 
 const Dialogs = (props) => {
-    let userItem = props.state.userData.map((user) => (
+    let userItem = props.dialogsPage.userData.map((user) => (
         <DialogUser username={user.name} id={user.id} userImg={user.userImg} />
     ));
 
-    // let messageIncomeItem = props.state.messagesData.incomeMessagesData.map(
-    //   (message) => <IncomeMessage messageText={message.messageText} />
-    // );
-
-    // let messageYourItem = props.state.messagesData.yourMessagesData.map(
-    //   (message) => <YourMessage messageText={message.messageText} />
-    // );
-
     let messageItem = () => {
-        let messageIncomeItem = props.state.messagesData.incomeMessagesData.map(
-            (message) => <IncomeMessage messageText={message.messageText} />
-        );
+        let messageIncomeItem =
+            props.dialogsPage.messagesData.incomeMessagesData.map((message) => (
+                <IncomeMessage messageText={message.messageText} />
+            ));
 
-        let messageYourItem = props.state.messagesData.yourMessagesData.map(
-            (message) => <YourMessage messageText={message.messageText} />
-        );
+        let messageYourItem =
+            props.dialogsPage.messagesData.yourMessagesData.map((message) => (
+                <YourMessage messageText={message.messageText} />
+            ));
         return [messageIncomeItem, messageYourItem];
     };
 
@@ -37,13 +26,13 @@ const Dialogs = (props) => {
 
     let onMessageChange = () => {
         let text = newMessageElement.current.value;
-        props.dispatch(onMessageChangeActionCreator(text));
+        props.onMessageChange(text);
     };
     let addMessage = () => {
         if (newMessageElement.current.value == 0) {
             return 0;
         } else {
-            props.dispatch(addMessageActionCreator());
+            props.addMessage();
         }
     };
 
@@ -60,7 +49,7 @@ const Dialogs = (props) => {
                         placeholder="Type a message here"
                         ref={newMessageElement}
                         onChange={onMessageChange}
-                        value={props.state.newMessageText}
+                        value={props.dialogsPage.newMessageText}
                     />
                     <button onClick={addMessage}>send</button>
                 </div>

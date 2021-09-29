@@ -17,13 +17,13 @@ const Posts = (props) => {
         if (newPostElement.current.value == 0) {
             return 0;
         } else {
-            props.dispatch(addPostActionCreator());
+            props.addPost();
         }
     };
 
     let onPostChange = () => {
         let text = newPostElement.current.value;
-        props.dispatch(onPostChangeActionCreator(text));
+        props.updateNewPostText(text);
     };
 
     return (

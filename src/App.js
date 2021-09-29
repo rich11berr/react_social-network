@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import "./App.css";
-import Dialogs from "./Components/Dialogs/Dialogs";
+import DialogsContainer from "./Components/Dialogs/DialogsContainer";
 import Header from "./Components/Header/Header";
 import Nav from "./Components/Nav/Nav";
 import Profile from "./Components/Profile/Profile";
@@ -15,21 +15,11 @@ const App = (props) => {
                 <main className="main">
                     <Route
                         path="/Dialogs"
-                        render={() => (
-                            <Dialogs
-                                state={props.state.dialogsPage}
-                                dispatch={props.dispatch}
-                            />
-                        )}
+                        render={() => <DialogsContainer store={props.store} />}
                     />
                     <Route
                         path="/Profile"
-                        render={() => (
-                            <Profile
-                                state={props.state.profilePage}
-                                dispatch={props.dispatch}
-                            />
-                        )}
+                        render={() => <Profile store={props.store} />}
                     />
                 </main>
             </div>
