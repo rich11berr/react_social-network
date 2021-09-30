@@ -15,12 +15,9 @@ const App = (props) => {
                 <main className="main">
                     <Route
                         path="/Dialogs"
-                        render={() => <DialogsContainer store={props.store} />}
+                        render={() => <DialogsContainer />}
                     />
-                    <Route
-                        path="/Profile"
-                        render={() => <Profile store={props.store} />}
-                    />
+                    <Route path="/Profile" render={() => <Profile />} />
                 </main>
             </div>
         </BrowserRouter>
