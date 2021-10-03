@@ -5,19 +5,30 @@ import IncomeMessage from "./Message/IncomeMessage";
 import YourMessage from "./Message/YourMessage";
 
 const Dialogs = (props) => {
+    // debugger;
     let userItem = props.dialogsPage.userData.map((user) => (
-        <DialogUser username={user.name} id={user.id} userImg={user.userImg} />
+        <DialogUser
+            username={user.name}
+            key={user.id}
+            id={user.id}
+            userImg={user.userImg}
+        />
     ));
 
     let messageItem = () => {
         let messageIncomeItem =
             props.dialogsPage.messagesData.incomeMessagesData.map((message) => (
-                <IncomeMessage messageText={message.messageText} />
+                <IncomeMessage
+                    messageText={message.messageText}
+                    key={message.id}
+                />
             ));
-
         let messageYourItem =
             props.dialogsPage.messagesData.yourMessagesData.map((message) => (
-                <YourMessage messageText={message.messageText} />
+                <YourMessage
+                    messageText={message.messageText}
+                    key={message.id}
+                />
             ));
         return [messageIncomeItem, messageYourItem];
     };
@@ -29,7 +40,7 @@ const Dialogs = (props) => {
         props.onMessageChange(text);
     };
     let addMessage = () => {
-        if (newMessageElement.current.value == 0) {
+        if (newMessageElement.current.value === 0) {
             return 0;
         } else {
             props.addMessage();

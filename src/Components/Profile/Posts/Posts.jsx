@@ -14,7 +14,7 @@ const Posts = (props) => {
     let newPostElement = React.createRef();
 
     let addPost = () => {
-        if (newPostElement.current.value == 0) {
+        if (newPostElement.current.value === 0) {
             return 0;
         } else {
             props.addPost();
