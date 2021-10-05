@@ -20,6 +20,7 @@
         margin: 0px auto; }
       .friendsWrap .userWrap .userSide .userSide_unfollow {
         background: linear-gradient(160.2deg, #5037e9 0%, #4a20c4 100%);
+        color: white;
         width: 100px;
         height: 50px;
         box-shadow: 4px 4px 25px rgba(42, 139, 242, 0.15), 2px 2px 25px rgba(42, 139, 242, 0.05), 4px 6px 10px rgba(42, 139, 242, 0.15);
@@ -28,11 +29,9 @@
         border: none;
         cursor: pointer;
         margin-top: 10px; }
-        .friendsWrap .userWrap .userSide .userSide_unfollow:hover {
-          background: #4d0c67;
-          box-shadow: 10px 10px 25px rgba(101, 18, 135, 0.1), 15px 15px 35px rgba(101, 18, 135, 0.05), 10px 10px 50px rgba(101, 18, 135, 0.1); }
       .friendsWrap .userWrap .userSide .userSide_follow {
-        background: #4d0c67;
+        background: white;
+        color: #5037e9;
         width: 100px;
         height: 50px;
         box-shadow: 10px 10px 25px rgba(101, 18, 135, 0.1), 15px 15px 35px rgba(101, 18, 135, 0.05), 10px 10px 50px rgba(101, 18, 135, 0.1);
@@ -41,9 +40,6 @@
         border: none;
         cursor: pointer;
         margin-top: 10px; }
-        .friendsWrap .userWrap .userSide .userSide_follow:hover {
-          box-shadow: 4px 4px 25px rgba(42, 139, 242, 0.15), 2px 2px 25px rgba(42, 139, 242, 0.05), 4px 6px 10px rgba(42, 139, 242, 0.15);
-          background: linear-gradient(160.2deg, #5037e9 0%, #4a20c4 100%); }
     .friendsWrap .userWrap .userData {
       margin-left: 20px; }
       .friendsWrap .userWrap .userData p {

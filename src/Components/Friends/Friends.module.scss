@@ -36,6 +36,7 @@ $bx_white: 10px 10px 25px rgba(112, 124, 151, 0.1),
             }
             .userSide_unfollow {
                 background: $active_bg;
+                color: white;
                 width: 100px;
                 height: 50px;
                 box-shadow: $bx_blue;
@@ -44,13 +45,15 @@ $bx_white: 10px 10px 25px rgba(112, 124, 151, 0.1),
                 border: none;
                 cursor: pointer;
                 margin-top: 10px;
-                &:hover {
-                    background: $inactive_bg;
-                    box-shadow: $bx_black;
-                }
+                // &:hover {
+                //     background: white;
+                //     color: #5037e9;
+                //     box-shadow: $bx_black;
+                // }
             }
             .userSide_follow {
-                background: $inactive_bg;
+                background: white;
+                color: #5037e9;
                 width: 100px;
                 height: 50px;
                 box-shadow: $bx_black;
@@ -59,10 +62,10 @@ $bx_white: 10px 10px 25px rgba(112, 124, 151, 0.1),
                 border: none;
                 cursor: pointer;
                 margin-top: 10px;
-                &:hover {
-                    box-shadow: $bx_blue;
-                    background: $active_bg;
-                }
+                // &:hover {
+                //     box-shadow: $bx_blue;
+                //     background: $active_bg;
+                // }
             }
         }
         .userData {
