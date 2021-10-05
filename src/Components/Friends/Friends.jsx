@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./Friends.module.css";
 
 let Friends = (props) => {
     if (props.usersData.length === 0) {
@@ -8,7 +9,7 @@ let Friends = (props) => {
                 username: "James",
                 userImg:
                     "https://images.unsplash.com/photo-1569466896818-335b1bedfcce?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-                shorty: "live is a choice",
+                shorty: "Whiskey is a great start",
                 location: {
                     country: "United States",
                     city: "NY",
@@ -20,10 +21,10 @@ let Friends = (props) => {
                 username: "Nika",
                 userImg:
                     "https://images.unsplash.com/photo-1619694770795-e21c58464159?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
-                shorty: "live is a choice",
+                shorty: "Don't let down friends and prod)",
                 location: {
-                    country: "United States",
-                    city: "NY",
+                    country: "United Kingdom",
+                    city: "Liverpool",
                 },
                 followStatus: true,
             },
@@ -32,10 +33,10 @@ let Friends = (props) => {
                 username: "Mike",
                 userImg:
                     "https://images.unsplash.com/photo-1631242918552-292249767127?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
-                shorty: "live is a choice",
+                shorty: "PR new emotions to my life",
                 location: {
-                    country: "United States",
-                    city: "NY",
+                    country: "German",
+                    city: "Berlin",
                 },
                 followStatus: true,
             },
@@ -44,10 +45,10 @@ let Friends = (props) => {
                 username: "Lora",
                 userImg:
                     "https://images.unsplash.com/photo-1620167972495-b6b7bdf32c5a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
-                shorty: "live is a choice",
+                shorty: "Vodka-matryoshka developer",
                 location: {
-                    country: "United States",
-                    city: "NY",
+                    country: "Russia",
+                    city: "Vladivostok",
                 },
                 followStatus: true,
             },
@@ -55,13 +56,21 @@ let Friends = (props) => {
     }
 
     return (
-        <div>
+        <div className={styles.friendsWrap}>
             {props.usersData.map((u) => (
-                <div key={u.id} className="userWrap">
-                    <div className="userSide">
-                        <img src={u.userImg} alt="userpic" />
+                <div key={u.id} className={styles.userWrap}>
+                    <div className={styles.userSide}>
+                        <div className={styles.userSide_img}>
+                            <img
+                                src={u.userImg}
+                                alt="userpic"
+                                width="100px"
+                                height="auto"
+                            />
+                        </div>
                         {u.followStatus ? (
                             <button
+                                className={styles.userSide_unfollow}
                                 onClick={() => {
                                     props.unfollow(u.id);
                                 }}
@@ -70,6 +79,7 @@ let Friends = (props) => {
                             </button>
                         ) : (
                             <button
+                                className={styles.userSide_follow}
                                 onClick={() => {
                                     props.follow(u.id);
                                 }}
@@ -78,11 +88,15 @@ let Friends = (props) => {
                             </button>
                         )}
                     </div>
-                    <div className="userData">
-                        <p className="username">{u.username}</p>
-                        <p className="shorty">{u.shorty}</p>
-                        <p className="country">{u.location.country}</p>
-                        <p className="city">{u.location.city}</p>
+                    <div className={styles.userData}>
+                        <p className={styles.userData_username}>{u.username}</p>
+                        <p className={styles.userData_shorty}>{u.shorty}</p>
+                        <p className={styles.userData_country}>
+                            {u.location.country}
+                        </p>
+                        <p className={styles.userData_city}>
+                            {u.location.city}
+                        </p>
                     </div>
                 </div>
             ))}

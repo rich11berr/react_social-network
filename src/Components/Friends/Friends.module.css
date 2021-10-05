@@ -1,0 +1,64 @@
+.friendsWrap {
+  margin-top: 40px; }
+  .friendsWrap .userWrap {
+    display: flex;
+    margin-top: 20px;
+    width: 60%;
+    border-radius: 20px; }
+    .friendsWrap .userWrap .userSide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      .friendsWrap .userWrap .userSide .userSide_img {
+        margin-left: 20px;
+        width: 100px;
+        height: 100px;
+        border-radius: 30px;
+        box-shadow: 10px 10px 25px rgba(101, 18, 135, 0.1), 15px 15px 35px rgba(101, 18, 135, 0.05), 10px 10px 50px rgba(101, 18, 135, 0.1);
+        overflow: hidden;
+        margin: 0px auto; }
+      .friendsWrap .userWrap .userSide .userSide_unfollow {
+        background: linear-gradient(160.2deg, #5037e9 0%, #4a20c4 100%);
+        width: 100px;
+        height: 50px;
+        box-shadow: 4px 4px 25px rgba(42, 139, 242, 0.15), 2px 2px 25px rgba(42, 139, 242, 0.05), 4px 6px 10px rgba(42, 139, 242, 0.15);
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px; }
+        .friendsWrap .userWrap .userSide .userSide_unfollow:hover {
+          background: #4d0c67;
+          box-shadow: 10px 10px 25px rgba(101, 18, 135, 0.1), 15px 15px 35px rgba(101, 18, 135, 0.05), 10px 10px 50px rgba(101, 18, 135, 0.1); }
+      .friendsWrap .userWrap .userSide .userSide_follow {
+        background: #4d0c67;
+        width: 100px;
+        height: 50px;
+        box-shadow: 10px 10px 25px rgba(101, 18, 135, 0.1), 15px 15px 35px rgba(101, 18, 135, 0.05), 10px 10px 50px rgba(101, 18, 135, 0.1);
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px; }
+        .friendsWrap .userWrap .userSide .userSide_follow:hover {
+          box-shadow: 4px 4px 25px rgba(42, 139, 242, 0.15), 2px 2px 25px rgba(42, 139, 242, 0.05), 4px 6px 10px rgba(42, 139, 242, 0.15);
+          background: linear-gradient(160.2deg, #5037e9 0%, #4a20c4 100%); }
+    .friendsWrap .userWrap .userData {
+      margin-left: 20px; }
+      .friendsWrap .userWrap .userData p {
+        margin-top: 7px;
+        color: white;
+        font-size: 15px; }
+      .friendsWrap .userWrap .userData .userData_username {
+        font-size: 20px; }
+      .friendsWrap .userWrap .userData .userData_shorty {
+        font-size: 17px;
+        padding: 10px;
+        background: linear-gradient(160.2deg, #5037e9 0%, #4a20c4 100%);
+        border-radius: 10px;
+        margin-left: 20px; }
+      .friendsWrap .userWrap .userData .userData_city {
+        margin-left: 5px; }
+
+/*# sourceMappingURL=Friends.module.css.map */
