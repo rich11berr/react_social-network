@@ -5,7 +5,7 @@ import { followAC, setUsersAC, unfollowAC } from "../../redux/friends-reducer";
 
 let MapStateToProps = (state) => {
     return {
-        usersData: state.friendsPage.usersData,
+        users: state.friendsPage.users,
     };
 };
 
@@ -17,8 +17,8 @@ let mapDispatchToProps = (dispatch) => {
         unfollow: (userId) => {
             dispatch(unfollowAC(userId));
         },
-        setUsers: (usersData) => {
-            dispatch(setUsersAC(usersData));
+        setUsers: (users) => {
+            dispatch(setUsersAC(users));
         },
     };
 };
